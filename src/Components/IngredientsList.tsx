@@ -1,5 +1,5 @@
 const IngredientsList = () => {
-  return <div>Ingredient List</div>;
+    return <h2>Ingredients</h2>;
 };
 
 export default IngredientsList;
