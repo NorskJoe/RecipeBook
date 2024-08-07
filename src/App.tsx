@@ -1,7 +1,7 @@
-import RecipePage from "./Components/RecipePage";
+import RecipePage from './Components/RecipePage';
 
 const App = () => {
-    return <RecipePage></RecipePage>;
+    return <RecipePage title="No Knead Focaccia"></RecipePage>;
 };
 
 export default App;

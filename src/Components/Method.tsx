@@ -1,5 +1,5 @@
 const Method = () => {
-  return <div>Method</div>;
+    return <h2>Method</h2>;
 };
 
 export default Method;
