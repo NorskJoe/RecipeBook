@@ -1,5 +1,6 @@
-import IngredientsList from './IngredientsList';
-import Method from './Method';
+import IngredientsList from '../IngredientsList';
+import Method from '../Method';
+import styles from './RecipePage.module.scss';
 
 interface RecipePageProps {
     title: string;
@@ -11,18 +12,13 @@ const RecipePage = ({ title }: RecipePageProps) => {
             <div className="container text-center">
                 <h1>{title}</h1>
                 <img
-                    style={{
-                        width: 'auto',
-                        height: '400px',
-                        backgroundColor: 'red',
-                        borderRadius: '8px',
-                    }}
+                    className={styles.recipeImage}
                     src="/no-knead-focaccia.webp"
                 ></img>
                 <div className="container text-center">
                     <div className="row align-items-start">
                         <div className="col">
-                            <IngredientsList></IngredientsList>
+                            <IngredientsList items={[]}></IngredientsList>
                         </div>
                         <div className="col">
                             <Method></Method>
