@@ -1,0 +1,40 @@
+{
+    "name": "No Knead Focaccia",
+    "ingredients": [
+        {
+            "name": "honey",
+            "quantity": 2,
+            "quantityType": "tsp"
+          },
+          {
+            "name": "dry yeast",
+            "quantity": 2,
+            "quantityType": "tsp"
+          },
+          {
+            "name": "plain flour",
+            "quantity": 5,
+            "quantityType": "cup"
+          },
+          {
+            "name": "kosher salt",
+            "quantity": 1,
+            "quantityType": "tbsp"
+          },
+          {
+            "name": "olive oil",
+            "quantity": 6,
+            "quantityType": "tbsp"
+          },
+          {
+            "name": "unsalted butter",
+            "quantity": 4,
+            "quantityType": "tbsp"
+          },
+          {
+            "name": "garlic cloves",
+            "quantity": 4,
+            "quantityType": "piece"
+          }
+    ]
+}

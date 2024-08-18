@@ -5,12 +5,13 @@ export interface IngredientItem {
 }
 
 export enum QuantityType {
-    TBSP = 'Tbsp',
+    TBSP = 'tbsp',
     TSP = 'tsp',
     CUP = 'cup',
     GRAMS = 'g',
     KILOS = 'kg',
     MLS = 'ml',
-    LITRES = 'L'
+    LITRES = 'L',
+    PIECES = 'piece'
 }
 
