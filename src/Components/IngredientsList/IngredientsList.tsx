@@ -1,5 +1,6 @@
 import IngredientsService from "../../Services/Ingredients/Ingredients.service";
 import { IngredientItem, QuantityType } from "./IngredientsList.models";
+import styles from "./IngredientsList.module.scss";
 
 interface IngredientsListProps {
   items: IngredientItem[];
@@ -45,10 +46,11 @@ const IngredientsList = ({ items }: IngredientsListProps) => {
   ];
 
   return (
-    <div className="container text-start">
-      <ul className="list-group">
+    <div className="container text-start my-5">
+      <h2 className="text-center">Ingredients</h2>
+      <ul className="list-group list-group-flush my-4">
         {items.map((item, index) => (
-          <li className="list-group-item" key={index}>{`${
+          <li className={`list-group-item ${styles.listItem}`} key={index}>{`${
             item.quantity
           } ${IngredientsService.convertIngredientsToPlural(
             item.quantityType,
