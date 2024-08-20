@@ -1,5 +1,5 @@
 import IngredientsList from "../IngredientsList";
-import Method from "../Method";
+import Method from "../Method/Method";
 import styles from "./RecipePage.module.scss";
 
 interface RecipePageProps {
@@ -15,7 +15,7 @@ const RecipePage = ({ title }: RecipePageProps) => {
         <div className="container text-center">
           <div className="row align-items-start">
             <div className="col">
-              <IngredientsList items={[]}></IngredientsList>
+              <IngredientsList ingredients={[]}></IngredientsList>
             </div>
             <div className="col">
               <Method></Method>

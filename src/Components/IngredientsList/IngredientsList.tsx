@@ -3,11 +3,13 @@ import { IngredientItem, QuantityType } from "./IngredientsList.models";
 import styles from "./IngredientsList.module.scss";
 
 interface IngredientsListProps {
-  items: IngredientItem[];
+  ingredients: IngredientItem[];
 }
 
-const IngredientsList = ({ items }: IngredientsListProps) => {
-  items = [
+const IngredientsList = ({
+  ingredients: ingredients,
+}: IngredientsListProps) => {
+  ingredients = [
     {
       name: "honey",
       quantity: 2,
@@ -49,10 +51,11 @@ const IngredientsList = ({ items }: IngredientsListProps) => {
     <div className="container text-start my-5">
       <h2 className="text-center">Ingredients</h2>
       <ul className="list-group list-group-flush my-4">
-        {items.map((item, index) => (
-          <li className={`list-group-item ${styles.listItem}`} key={index}>{`${
-            item.quantity
-          } ${IngredientsService.convertIngredientsToPlural(
+        {ingredients.map((item, index) => (
+          <li
+            className={`list-group-item fs-5 py-3 ${styles.listItem}`}
+            key={index}
+          >{`${item.quantity} ${IngredientsService.convertIngredientsToPlural(
             item.quantityType,
             item.quantity
           )} ${item.name}`}</li>
