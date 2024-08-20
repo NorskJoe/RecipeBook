@@ -1,0 +1,8 @@
+@use "../../Styles/colours" as colours;
+
+.listItem {
+  border: 1px solid colours.$blue-grey;
+  &:hover {
+    background-color: colours.$maroon75Opacity;
+  }
+}
