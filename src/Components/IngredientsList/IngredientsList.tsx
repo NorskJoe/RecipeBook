@@ -1,6 +1,6 @@
-import IngredientsService from "../../Services/Ingredients/Ingredients.service";
-import { IngredientItem, QuantityType } from "./IngredientsList.models";
-import styles from "./IngredientsList.module.scss";
+import IngredientsService from '../../Services/Ingredients/Ingredients.service';
+import { IngredientItem } from './IngredientsList.models';
+import styles from './IngredientsList.module.scss';
 
 interface IngredientsListProps {
   ingredients: IngredientItem[];
@@ -9,44 +9,6 @@ interface IngredientsListProps {
 const IngredientsList = ({
   ingredients: ingredients,
 }: IngredientsListProps) => {
-  ingredients = [
-    {
-      name: "honey",
-      quantity: 2,
-      quantityType: QuantityType.TSP,
-    },
-    {
-      name: "dry yeast",
-      quantity: 2,
-      quantityType: QuantityType.TSP,
-    },
-    {
-      name: "plain flour",
-      quantity: 5,
-      quantityType: QuantityType.CUP,
-    },
-    {
-      name: "kosher salt",
-      quantity: 1,
-      quantityType: QuantityType.TBSP,
-    },
-    {
-      name: "olive oil",
-      quantity: 6,
-      quantityType: QuantityType.TBSP,
-    },
-    {
-      name: "unsalted butter",
-      quantity: 4,
-      quantityType: QuantityType.TBSP,
-    },
-    {
-      name: "garlic cloves",
-      quantity: 4,
-      quantityType: QuantityType.PIECES,
-    },
-  ];
-
   return (
     <div className="container text-start my-5">
       <h2 className="text-center">Ingredients</h2>

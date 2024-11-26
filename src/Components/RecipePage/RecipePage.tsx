@@ -1,12 +1,16 @@
-import IngredientsList from "../IngredientsList";
-import Method from "../Method/Method";
-import styles from "./RecipePage.module.scss";
+import IngredientsList from '../IngredientsList';
+import { IngredientItem } from '../IngredientsList/IngredientsList.models';
+import Method from '../Method/Method';
+import { MethodItem } from '../Method/Method.models';
+import styles from './RecipePage.module.scss';
 
 interface RecipePageProps {
   title: string;
+  ingredients: IngredientItem[];
+  method: MethodItem[];
 }
 
-const RecipePage = ({ title }: RecipePageProps) => {
+const RecipePage = ({ title, ingredients, method }: RecipePageProps) => {
   return (
     <>
       <div className="container text-center">
@@ -15,10 +19,10 @@ const RecipePage = ({ title }: RecipePageProps) => {
         <div className="container text-center">
           <div className="row align-items-start">
             <div className="col">
-              <IngredientsList ingredients={[]}></IngredientsList>
+              <IngredientsList ingredients={ingredients}></IngredientsList>
             </div>
             <div className="col">
-              <Method></Method>
+              <Method steps={method}></Method>
             </div>
           </div>
         </div>
