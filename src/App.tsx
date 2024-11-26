@@ -4,26 +4,18 @@ import { getRecipe } from "./Services/Recipes/Recipe.service";
 import { Recipe } from "./Models/Recipe.model";
 
 const App = () => {
-  const [recipeData, setRecipeData] = useState({} as Recipe);
+  const [recipeData, setRecipeData] = useState<Recipe | undefined>(undefined);
 
   useEffect(() => {
-    let loaded = true;
     getRecipe().then((recipe) => {
-      console.log("recipe response: ", recipe);
-      if (loaded) {
-        setRecipeData(recipe);
-      }
+      setRecipeData(recipe);
     });
-    return () => {
-      loaded = false;
-    };
   }, []);
-  console.log("recipe data: ", recipeData);
 
   return (
     recipeData && (
       <RecipePage
-        title={recipeData.recipeName}
+        title={recipeData.name}
         ingredients={recipeData.ingredients}
         method={recipeData.method}
       ></RecipePage>

@@ -1,20 +1,16 @@
-import { Recipe } from "../../Models/Recipe.model";
+import { Recipe } from '../../Models/Recipe.model';
 
-const RECIPE_URL = "./recipes.json";
+const RECIPE_URL = './recipes.json';
 
 const getRecipe = async (): Promise<Recipe> => {
-  console.log("fetching recipe");
   try {
-    await fetch(RECIPE_URL)
-      .then((response) => response.json())
-      .then((result) => {
-        console.log("recipe result in service: ", result);
-        return result as Recipe;
-      });
+    const data = await fetch(RECIPE_URL);
+    const response = await data.json();
+    return response as Recipe;
   } catch (error) {
+    console.error('Error fetching recipe: ', error);
     return <Recipe>{};
   }
-  return <Recipe>{};
 };
 
 export { getRecipe };

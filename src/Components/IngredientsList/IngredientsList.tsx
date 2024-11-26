@@ -1,6 +1,6 @@
-import IngredientsService from "../../Services/Ingredients/Ingredients.service";
-import { IngredientItem, QuantityType } from "./IngredientsList.models";
-import styles from "./IngredientsList.module.scss";
+import IngredientsService from '../../Services/Ingredients/Ingredients.service';
+import { IngredientItem } from './IngredientsList.models';
+import styles from './IngredientsList.module.scss';
 
 interface IngredientsListProps {
   ingredients: IngredientItem[];
