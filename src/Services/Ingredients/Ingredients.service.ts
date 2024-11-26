@@ -3,8 +3,6 @@ import { QuantityType } from "../../Components/IngredientsList/IngredientsList.m
 
 const IngredientsService = {
     convertIngredientsToPlural: (quantityType: QuantityType, amount: number): string => {
-        console.log(`quantity: ${amount}. type: ${quantityType}`);
-        console.log(`type of quantityType: ${typeof quantityType}`)
         if (amount <= 1) {
             return quantityType;
         }
