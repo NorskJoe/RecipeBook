@@ -18,7 +18,6 @@ const Method = ({ steps: steps }: MethodProps) => {
             {step.instructions}
           </li>
         ))}
-        ;
       </ul>
     </div>
   );

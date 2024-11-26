@@ -5,4 +5,5 @@ export interface Recipe {
   name: string;
   ingredients: IngredientItem[];
   method: MethodItem[];
+  image: string;
 }

@@ -8,14 +8,15 @@ interface RecipePageProps {
   title: string;
   ingredients: IngredientItem[];
   method: MethodItem[];
+  image: string;
 }
 
-const RecipePage = ({ title, ingredients, method }: RecipePageProps) => {
+const RecipePage = ({ title, ingredients, method, image }: RecipePageProps) => {
   return (
     <>
       <div className="container text-center">
         <h1>{title}</h1>
-        <img className={styles.recipeImage} src="/no-knead-focaccia.webp"></img>
+        <img className={styles.recipeImage} src={image}></img>
         <div className="container text-center">
           <div className="row align-items-start">
             <div className="col">
