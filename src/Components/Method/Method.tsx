@@ -1,5 +1,5 @@
-import { MethodItem } from "./Method.models";
-import styles from "./Method.module.scss";
+import { MethodItem } from './Method.models';
+import styles from './Method.module.scss';
 
 interface MethodProps {
   steps: MethodItem[];

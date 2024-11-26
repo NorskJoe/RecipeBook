@@ -1,7 +1,7 @@
-@use "./Styles/colours" as colours;
+@use './Styles/colours' as colours;
 
 // root
 $body-color: colours.$ebony;
 $body-bg: colours.$slate;
 
-@import "bootstrap/scss/bootstrap";
+@import 'bootstrap/scss/bootstrap';

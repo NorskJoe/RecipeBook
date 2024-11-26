@@ -1,3 +1,3 @@
-import IngredientsList from "./IngredientsList";
+import IngredientsList from './IngredientsList';
 
 export default IngredientsList;

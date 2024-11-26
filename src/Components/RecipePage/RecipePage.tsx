@@ -1,8 +1,8 @@
-import IngredientsList from "../IngredientsList";
-import { IngredientItem } from "../IngredientsList/IngredientsList.models";
-import Method from "../Method/Method";
-import { MethodItem } from "../Method/Method.models";
-import styles from "./RecipePage.module.scss";
+import IngredientsList from '../IngredientsList';
+import { IngredientItem } from '../IngredientsList/IngredientsList.models';
+import Method from '../Method/Method';
+import { MethodItem } from '../Method/Method.models';
+import styles from './RecipePage.module.scss';
 
 interface RecipePageProps {
   title: string;

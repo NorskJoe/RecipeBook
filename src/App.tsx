@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
-import RecipePage from "./Components/RecipePage";
-import { getRecipe } from "./Services/Recipes/Recipe.service";
-import { Recipe } from "./Models/Recipe.model";
+import { useEffect, useState } from 'react';
+import RecipePage from './Components/RecipePage';
+import { getRecipe } from './Services/Recipes/Recipe.service';
+import { Recipe } from './Models/Recipe.model';
 
 const App = () => {
   const [recipeData, setRecipeData] = useState<Recipe | undefined>(undefined);

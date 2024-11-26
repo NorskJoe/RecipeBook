@@ -1,3 +1,3 @@
 export interface MethodItem {
-    instructions: string;
+  instructions: string;
 }
