@@ -1,16 +1,23 @@
+import { fromFetch } from 'rxjs/fetch';
 import { Recipe } from '../../Models/Recipe.model';
+import { Observable, Subject, take } from 'rxjs';
 
-const RECIPE_URL = './recipes.json';
+class RecipeService {
+  recipeData$ = new Subject<Recipe>();
 
-const getRecipe = async (): Promise<Recipe> => {
-  try {
-    const data = await fetch(RECIPE_URL);
-    const response = await data.json();
-    return response as Recipe;
-  } catch (error) {
-    console.error('Error fetching recipe: ', error);
-    return <Recipe>{};
+  RECIPE_URL = './recipes.json'
+
+  getRecipe(): Observable<Recipe> {
+    fromFetch(this.RECIPE_URL, {
+      selector: (response) => response.json()
+    })
+      .pipe(take(1))
+      .subscribe((recipeData) => {
+        this.recipeData$.next(recipeData);
+      })
+
+      return this.recipeData$;
   }
-};
+}
 
-export { getRecipe };
+export const recipeService = new RecipeService();

@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react';
 import RecipePage from './Components/RecipePage';
-import { getRecipe } from './Services/Recipes/Recipe.service';
+import { recipeService } from './Services/Recipes/Recipe.service';
 import { Recipe } from './Models/Recipe.model';
 
 const App = () => {
   const [recipeData, setRecipeData] = useState<Recipe | undefined>(undefined);
 
   useEffect(() => {
-    getRecipe().then((recipe) => {
+    recipeService.getRecipe().subscribe((recipe) => {
       setRecipeData(recipe);
     });
   }, []);
