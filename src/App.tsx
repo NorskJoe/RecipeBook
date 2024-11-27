@@ -19,6 +19,8 @@ const App = () => {
         ingredients={recipeData.ingredients}
         method={recipeData.method}
         image={recipeData.image}
+        prepTime={recipeData.prepTime}
+        cookTime={recipeData.cookTime}
       ></RecipePage>
     )
   );
