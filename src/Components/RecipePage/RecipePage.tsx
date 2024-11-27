@@ -12,6 +12,7 @@ interface RecipePageProps {
   image: string;
   prepTime: string;
   cookTime: string;
+  serves: number;
 }
 
 const RecipePage = ({
@@ -21,20 +22,21 @@ const RecipePage = ({
   image,
   prepTime,
   cookTime,
+  serves,
 }: RecipePageProps) => {
   return (
     <>
       <div className="container text-center">
         <h1>{title}</h1>
         <img className={styles.recipeImage} src={image}></img>
-        <SummaryPanel prepTime={prepTime} cookTime={cookTime}></SummaryPanel>
+        <SummaryPanel prepTime={prepTime} cookTime={cookTime} serves={serves} />
         <div className="container text-center">
           <div className="row align-items-start">
             <div className="col">
-              <IngredientsList ingredients={ingredients}></IngredientsList>
+              <IngredientsList ingredients={ingredients} />
             </div>
             <div className="col">
-              <Method steps={method}></Method>
+              <Method steps={method} />
             </div>
           </div>
         </div>

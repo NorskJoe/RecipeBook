@@ -8,4 +8,5 @@ export interface Recipe {
   image: string;
   prepTime: string;
   cookTime: string;
+  serves: number;
 }

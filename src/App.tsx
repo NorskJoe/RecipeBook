@@ -21,6 +21,7 @@ const App = () => {
         image={recipeData.image}
         prepTime={recipeData.prepTime}
         cookTime={recipeData.cookTime}
+        serves={recipeData.serves}
       ></RecipePage>
     )
   );
