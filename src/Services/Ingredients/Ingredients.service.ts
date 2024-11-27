@@ -1,10 +1,10 @@
 import { QuantityType } from '../../Components/IngredientsList/IngredientsList.models';
 
-const IngredientsService = {
-  convertIngredientsToPlural: (
+class IngredientsService {
+  convertIngredientsToPlural(
     quantityType: QuantityType,
     amount: number
-  ): string => {
+  ): string {
     if (amount <= 1) {
       return quantityType;
     }
@@ -20,7 +20,7 @@ const IngredientsService = {
       default:
         return quantityType;
     }
-  },
-};
+  }
+}
 
-export default IngredientsService;
+export const ingredientsService = new IngredientsService();

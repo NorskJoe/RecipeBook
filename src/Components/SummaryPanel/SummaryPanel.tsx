@@ -4,18 +4,26 @@ interface SummaryPanelProps {
   prepTime: string;
   cookTime: string;
   serves: number;
+  handleServeSizeChange: (increase: boolean) => void;
 }
 
-const SummaryPanel = ({ prepTime, cookTime, serves }: SummaryPanelProps) => {
+const SummaryPanel = ({
+  prepTime,
+  cookTime,
+  serves,
+  handleServeSizeChange,
+}: SummaryPanelProps) => {
   return (
     <div className="container">
       <div className="row">
         <div className="col-sm">Prep {prepTime}</div>
         <div className="col-sm">Cook {cookTime}</div>
         <div className="col-sm">
-          <FaMinus />
+          <FaMinus
+            onClick={() => (serves > 1 ? handleServeSizeChange(false) : null)}
+          />
           Serves {serves}
-          <FaPlus />
+          <FaPlus onClick={() => handleServeSizeChange(true)} />
         </div>
       </div>
     </div>
