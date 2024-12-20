@@ -12,16 +12,7 @@ const App = () => {
     });
   }, []);
 
-  return (
-    recipeData && (
-      <RecipePage
-        title={recipeData.name}
-        ingredients={recipeData.ingredients}
-        method={recipeData.method}
-        image={recipeData.image}
-      ></RecipePage>
-    )
-  );
+  return recipeData && <RecipePage recipe={recipeData}></RecipePage>;
 };
 
 export default App;

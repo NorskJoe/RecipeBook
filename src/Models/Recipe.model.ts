@@ -6,4 +6,7 @@ export interface Recipe {
   ingredients: IngredientItem[];
   method: MethodItem[];
   image: string;
+  prepTime: string;
+  cookTime: string;
+  serves: number;
 }
